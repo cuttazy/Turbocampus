@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Nuovi avvisi:</h2>
+
+
+  <div *ngFor="let notification of notifications">
+
+    <ion-card (click)="avvisoDetail(notification)">
+
+      <ion-item>
+        <h2>{{notification.user}}</h2>
+        <p>{{notification.creation_date}}</p>
+      </ion-item>
+
+      <ion-card-content>
+        <p>{{notification.text}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
